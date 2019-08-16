@@ -11,7 +11,7 @@ class CafeXSpec extends FlatSpec with Matchers {
   }
 
   it should "return 1.00 if Coffee is ordered" in {
-    CafeX.order(Seq("Cola")) shouldEqual 1.00
+    CafeX.order(Seq("Coffee")) shouldEqual 1.00
 
   }
 
