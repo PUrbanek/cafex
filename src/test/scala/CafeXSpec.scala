@@ -14,12 +14,20 @@ class CafeXSpec extends FlatSpec with Matchers {
     CafeX.calculatePrice(Seq("Coffee")) shouldEqual 1.00
   }
 
+  it should "return 1.50 if Cola and Coffe are ordered" in {
+    CafeX.calculatePrice(Seq("Coffee", "Cola")) shouldEqual 1.50
+  }
+
   it should "return 2.20 if Cheese Sandwich is ordered" in {
     CafeX.calculatePrice(Seq("Cheese Sandwich")) shouldEqual 2.20
   }
 
   it should "return 5.40 if Steak Sandwich is ordered" in {
     CafeX.calculatePrice(Seq("Steak Sandwich")) shouldEqual 5.40
+  }
+
+  it should "return 7.80 if Steak Sandwich and Cheese Sandwich are ordered" in {
+    CafeX.calculatePrice(Seq("Steak Sandwich", "Cheese Sandwich")) shouldEqual 7.80
   }
 
   it should "not count nonexistent items" in {
